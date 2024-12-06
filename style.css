@@ -8,7 +8,7 @@ body, html {
 }
 
 .background {
-    background-image: url('love.jpg'); /* Ajoute une image romantique */
+    background-image: url('love.png'); /* Ajoute une image romantique */
     background-size: cover;
     background-position: center;
     height: 100vh;
