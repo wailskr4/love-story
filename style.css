@@ -1,6 +1,4 @@
 /* styles.css */
-
-/* Corps de la page */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -18,15 +16,12 @@ body {
     margin-top: 10%;
     position: relative;
 }
-
-/* Texte d'introduction */
 .intro-text {
     transition: opacity 0.5s ease-out;
 }
-
 /* Titre principal */
 .msgs {
-    font-size: 2.5rem; /* Réduction pour mobile */
+    font-size: 3rem;
     margin-bottom: 20px;
     color: #ffcc00;
     text-shadow: 0 0 15px #ffcc00, 0 0 30px #ff6600;
@@ -35,10 +30,10 @@ body {
 
 /* Paragraphe */
 p {
-    font-size: 1.2rem; /* Ajustement pour mobile */
+    font-size: 1.5rem;
     margin: 20px auto;
     line-height: 1.8;
-    max-width: 90%; /* Plus étroit pour s'adapter à l'écran mobile */
+    max-width: 600px;
     padding: 15px;
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.1);
@@ -48,8 +43,8 @@ p {
 
 /* Bouton */
 button {
-    padding: 12px 20px; /* Réduction du padding */
-    font-size: 1rem; /* Réduction de la taille pour mobile */
+    padding: 12px 25px;
+    font-size: 1.2rem;
     background: linear-gradient(45deg, #ff5a5a, #ff8566);
     color: #fff;
     border: none;
@@ -63,19 +58,21 @@ button:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 20px rgba(255, 90, 90, 0.8);
 }
-
 /* Boîte surprise */
 .surprise {
-    position: absolute;
-    top: 50%; /* Centré pour mobile */
+
+position: fixed; /* Fixée pour toujours être visible */
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%; /* Plus large pour mobile */
+
+    width: 80%;
+    max-width: 600px;
     padding: 20px;
     background: radial-gradient(circle, #ffccff, #ff99ff);
     color: #4d004d;
     border-radius: 15px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     box-shadow: 0 0 15px rgba(255, 153, 255, 0.5);
     animation: glow 2s infinite alternate;
     opacity: 0;
@@ -89,15 +86,6 @@ button:hover {
     visibility: visible;
 }
 
-/* Confettis */
-.confetti {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: #ffcc00;
-    border-radius: 50%;
-    animation: fall linear infinite;
-}
 
 /* Effet de lumière pour les textes */
 @keyframes flicker {
@@ -119,7 +107,16 @@ button:hover {
     }
 }
 
-/* Chute des confettis */
+/* Confettis */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    animation: fall linear infinite;
+}
+
 @keyframes fall {
     0% {
         transform: translateY(0) rotate(0deg);
@@ -128,22 +125,5 @@ button:hover {
     100% {
         transform: translateY(100vh) rotate(360deg);
         opacity: 0;
-    }
-}
-
-/* Media queries pour mobile */
-@media (max-width: 768px) {
-    .msgs {
-        font-size: 2rem; /* Plus petit titre */
-    }
-    p {
-        font-size: 1rem; /* Taille de texte réduite */
-    }
-    button {
-        padding: 10px 18px; /* Bouton plus compact */
-        font-size: 0.9rem; /* Texte du bouton plus petit */
-    }
-    .surprise {
-        font-size: 1rem; /* Réduction pour la boîte surprise */
     }
 }
