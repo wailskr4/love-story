@@ -18,37 +18,31 @@ const countdown = document.getElementById('time');
             document.getElementById('message-box').style.display = 'none';
             document.getElementById('memories').style.display = 'block';
             document.getElementById('love-box').style.display = 'block';
-            triggerFireworks();
+            togglethem();
         });
 
-        // Feux d'artifice
-        function triggerFireworks() {
-            const script = document.createElement('script');
-            script.src = 'https://cdn.jsdelivr.net/npm/fireworks-js/dist/index.min.js';
+     const container = document.querySelector('.container');
+     function togglethem() {
+              const fireworks = new Fireworks.default(container, {
+            autoresize: true,
+            opacity: 0.9,
+            acceleration: 1.05,
+            friction: 0.98,
+            gravity: 1.5,
+            particles: 50,
+            traceLength: 3,
+            explosion: 5,
+        });
 
-            script.onload = () => {
-                const container = document.createElement('div');
-                container.style.position = 'fixed';
-                container.style.top = '0';
-                container.style.left = '0';
-                container.style.width = '100%';
-                container.style.height = '100%';
-                container.style.zIndex = '9999';
-                document.body.appendChild(container);
-
-                const fireworks = new Fireworks(container, {
-                    rocketsPoint: 50,
-                    speed: 4,
-                    acceleration: 1.05,
-                    friction: 0.98,
-                    gravity: 1.5,
-                });
-                fireworks.start();
-
-                setTimeout(() => {
-                    fireworks.stop();
-                    document.body.removeChild(container);
-                }, 5000);
-            };
-            document.body.appendChild(script);
-        }
+  fireworks.start();
+          setTimeout(() => {
+            fireworks.stop();
+            document.body.removeChild(container);
+        }, 10000);
+    };
+     
+function showText(image) {
+    const parent = image.parentElement; // Récupère le conteneur parent
+    const text = parent.querySelector('.memory-text'); // Récupère le texte
+    text.style.display = text.style.display === 'block' ? 'none' : 'block'; // Affiche/Cache le texte
+}

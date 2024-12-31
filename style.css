@@ -5,13 +5,41 @@ body {
             margin: 0;
             padding: 0;
         }
+        .memory-text {
+    display: none;
+    margin-top: 10px;
+    font-size: 1.12em;
+    font-weight: 900;
+    font-family: ;
+    font-style: italic;
+    color: #5a0a5c; /* Texte violet */
+    animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+        .container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -3;
+        }
         .decorations {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('back.jpg') ; /* Ajoutez une image de décoration */
+            background-image: url('back.jpg') ;
+            background-position: center;
+            background-attachment: fixed; /* Ajoutez une image de décoration */
             opacity: 0.2;
             z-index: -1;
         }
@@ -64,7 +92,13 @@ body {
             height: 250px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+        .grid img:hover {
+    transform: scale(1.05); /* Agrandit légèrement l'image */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Augmente l'ombre */
+    filter: brightness(1.2); /* Rend l'image un peu plus lumineuse */
+}
         .love-box {
             display: none;
             max-width: 600px;
@@ -98,7 +132,9 @@ body {
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('hearts-and-stars.png'); /* Ajoutez une image de décoration */
+            background-image: url('back.jpg') ;
+            background-position: center;
+            background-attachment: fixed; /* Ajoutez une image de décoration */
             opacity: 0.2;
             z-index: -1;
         }
@@ -172,4 +208,5 @@ body {
                 opacity: 1;
             }
         }
+
 }

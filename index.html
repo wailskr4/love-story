@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bonne Année Nesrine</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
 </head>
 <body>
+<div class="container"></div>
     <div class="decorations"></div>
     <div class="message-box" id="message-box">
         <h1>Merci pour tout, Nesrine ❤️</h1>
@@ -15,19 +17,36 @@
         <button id="show-memories" >Appuie sur moi</button>
     </div>
 <div id="memories" style="display:none; text-align: center; margin-top: 20px;">
-        <h2>Avec toi la vie est unique</h2>
-        <div class="grid">
-            <img src="first.jpg" alt="Souvenir 1">
-            <img src="second.jpg" alt="Souvenir 2">
-            <img src="third.jpg" alt="Souvenir 3">
-            <img src="forth.jpg" alt="Souvenir 4">
+    <h2>Avec toi la vie est unique</h2>
+    <div class="grid">
+        <div class="memory">
+            <img src="first.jpg" alt="Souvenir 1" onclick="showText(this)">
+            <p class="memory-text">Ma Femme : celle qui illumine ma vie avec son sourire et coeur aussi blanc que la neige ❤️</p>
+        </div>
+        <div class="memory">
+            <img src="second.jpg" alt="Souvenir 2" onclick="showText(this)">
+            <p class="memory-text">wail : Sont epoux qui fera tout pour sont bonheur et joie il l'aime tant 🌟</p>
+        </div>
+        <div class="memory">
+            <img src="third.jpg" alt="Souvenir 3" onclick="showText(this)">
+            <p class="memory-text">  Notre vie au futur deux  domaine, deux profession 😄</p>
+        </div>
+        <div class="memory">
+            <img src="forth.jpg" alt="Souvenir 4" onclick="showText(this)">
+            <p class="memory-text">La distance ne changera jamais cette amour intense et sincere 💕</p>
         </div>
     </div>
+</div>
+
     <div id="love-box" class="love-box">
         <h2>Tu es l'amour de ma vie ❤️</h2>
-        <p>Chaque moment avec toi est un trésor inestimable. je t'aime mon bébé merci pour tout les moment
+        <p style="font-size:1.14em; font-weight: 900; font-style: italic;">Chaque moment avec toi est un trésor inestimable. je t'aime mon bébé merci pour tout les moment
         tu est ma lumiere et mon bonheur ya nesrine. je serai a toi toute la vie ta possesion ton homme et chez toi</p>
     </div>
-    <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js"></script>
+
+<!-- UNPKG -->
+<script src="https://unpkg.com/fireworks-js@2.x/dist/index.umd.js"></script>
+</script>
 </body>
 </html>
