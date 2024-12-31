@@ -31,14 +31,15 @@ const countdown = document.getElementById('time');
             gravity: 1.5,
             particles: 50,
             traceLength: 3,
-            explosion: 5,
+            explosion: 8,
+        traceSpeed:23,
         });
 
   fireworks.start();
           setTimeout(() => {
             fireworks.stop();
             document.body.removeChild(container);
-        }, 10000);
+        }, 11000);
     };
      
 function showText(image) {
